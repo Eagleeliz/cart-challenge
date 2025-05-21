@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert Order App</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap" rel="stylesheet">
+     <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <section class="menu">
+            <h2>Desserts</h2>
+            <div class="menu-items">
+                </div>
+        </section>
+
+        <aside class="cart">
+            <h2>Your Cart (<span id="cart-item-count">0</span>)</h2>
+            <div id="cart-empty-state" class="text-center py-8">
+                <img src="./images/illustration-empty-cart.svg" alt="Empty Cart" class="mx-auto mb-4 rounded-lg">
+                <p class="text-gray-500">Your added items will appear here</p>
+            </div>
+            <div id="cart-items">
+                </div>
+            <div class="carbon-neutral-delivery">
+                <img src="./images/icon-carbon-neutral.svg" alt="Leaf icon" class="carbon-neutral-icon"> This is a carbon-neutral delivery
+            </div>
+            <div class="order-total">
+                Order Total: <span id="cart-total">$0.00</span>
+            </div>
+            <button id="confirm-order" class="confirm-order-btn">Confirm Order</button>
+        </aside>
+    </div>
+
+    <div id="order-confirmation-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://placehold.co/60x60/27ae60/FFFFFF?text=✓" alt="Order Confirmed Checkmark" class="checkmark-icon">
+                <h3>Order Confirmed</h3>
+                <p>We hope you enjoy your food!</p>
+            </div>
+            <div class="modal-body" id="modal-cart-summary">
+                </div>
+            <div class="modal-footer">
+                <div class="modal-order-total">
+                    Order Total: <span id="modal-cart-total">$0.00</span>
+                </div>
+                <button id="start-new-order" class="start-new-order-btn">Start New Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
